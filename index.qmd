@@ -1,0 +1,287 @@
+---
+title: "Introduction to Timeseries Analysis"
+format: 
+  revealjs:
+    theme: sky
+    incremental: true
+    slide-level: 3
+    toc: true
+    toc-depth: 2
+    toc-title: Outline
+    colorlinks: false
+    slide-number: c/t
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    code-fold: true
+    code-copy: true
+author:
+  - Nithin M 
+  - Senior Research Fellow 
+  - Department of Humanities and Social Sciences 
+  - Indian Institute of Technology Kharagpur
+engine: knitr
+---
+### Introduction
+- What is time series?
+- Examples of time series data
+- why study time series?
+
+
+::: {.notes}
+- ordered collection of observations; usually equally spaced over time
+- mainly to understand the data generating process, forecasting of future values 
+- special because of autocorrelation among two observations
+
+:::
+
+
+### Components of time series {.scrollable}
+
+a time series can be decomposed into 4 components
+
+1. Trend
+   - long pattern of the series
+   - positive or negative
+1. Seasonal 
+   - regular fluctuations in a specific frequency
+1. Cyclical 
+   - up- down movement over longer periods
+   - typical business cycles in macroeconomics
+1. Irregular 
+   - Unpredictable component 
+   
+### Working with R
+
+```{r}
+#| echo: true
+#| fig.cap: Time series plot of air passengers data
+## Data we use is the inbuilt "AirPassengers" data
+plot(AirPassengers)
+```
+
+### Working with R
+```{r}
+#| echo: true
+#| fig.cap: Time series decomposition of air passengers data
+plot(decompose(AirPassengers))
+```
+
+### Stochastic Process
+- a collection of time indexed random variables
+- randomness 
+- time series is actually a realization from certain stochastic process
+- stationary and non-stationary process
+
+
+::: {.notes}
+- cannot be accurately predicted
+:::
+
+### Stationary Stochastic Process
+a discrete stochastic series is stationary if 
+\begin{equation}
+\begin{aligned}
+&E\left(y_{t}\right)=\mu \\
+&E\left(y_{t}-\mu\right)^{2}=\sigma^{2} \\
+&E\left[\left(y_{t}-\mu\right)\left(y_{t+k}-\mu\right)\right]=r_{k}
+\end{aligned}
+\end{equation}
+
+### White Noise Process
+- sequence of uncorrelated random variables from a fixed distribution
+- *i.i.d*
+
+. . .
+
+::: {.incremental}
+\begin{equation}
+\begin{aligned}
+&E\left(y_{t}\right)=\mu=0 \\
+&E\left(y_{t}-\mu\right)^{2}=Var(y_t)=\sigma_{\mu}^{2}
+\end{aligned}
+\end{equation}
+:::
+
+### Simulation of Stationary process {.scrollable}
+
+::: {.panel-tabset}
+
+### Basic Plot
+
+```{r}
+#| echo: true
+# purely random process with mean 0 and standard deviation 1
+eps <- rnorm(100, mean = 0, sd = 1)
+mu <- 2 # the constant mean
+# The process
+x_t <-mu+ eps
+
+#Conversion to time series
+x_t_ts<-ts(x_t, start = c(1990,1),frequency = 12)
+
+x_t_ts
+  
+```
+
+```{r}
+#| echo: true
+plot(x_t_ts)
+```
+
+
+### XTS package
+
+```{r}
+#| echo: true
+# purely random process with mean 0 and standard deviation 1
+eps <- rnorm(100, mean = 0, sd = 1)
+mu <- 2 # the constant mean
+# The process
+x_t <-mu+ eps
+
+#Conversion to time series
+library(xts)
+xt_xts<-as.xts(x_t_ts)
+xt_xts
+
+```
+```{r}
+#| echo: true
+plot(xt_xts)
+  
+```
+
+:::
+
+### White noise process in R {.scrollable}
+::: {.panel-tabset}
+### Using base R
+```{r}
+#| echo: true
+
+plot(rnorm(100),type="l")
+
+```
+
+### using stats package
+```{r}
+#| echo: true
+
+white_noise<- arima.sim(model = list(order = c(0, 0, 0)), n = 100)
+
+# Plot the WN observations
+ts.plot(white_noise)
+
+
+```
+:::
+
+
+### Autocorrelation and Autocovariance Functions 
+- both as functions of only time differences $|t-s|$
+- Autocovariance
+\begin{equation}
+\gamma_{k}=\operatorname{Cov}\left(Z_{t}, Z_{t+k}\right)=E\left(Z_{t}-\mu\right)\left(Z_{t+k}-\mu\right)
+\end{equation}
+
+- Autocorrelation Function (ACF)
+\begin{equation}
+\rho_{k}=\frac{\operatorname{Cov}\left(Z_{t}, Z_{f+k}\right)}{\sqrt{\operatorname{Var}\left(Z_{f}\right)} \sqrt{\operatorname{Var}\left(Z_{t+k}\right)}}=\frac{\gamma_{k}}{\gamma_{0}}
+\end{equation}
+
+### Implementation in R
+::: {.panel-tabset}
+
+### ACF Table
+```{r}
+#| echo: true
+#| message: false
+library(forecast)
+ggAcf(AirPassengers,lag.max = 10,plot = F)
+
+```
+
+### ACF plot
+```{r}
+#| echo: true
+#| message: false
+
+ggAcf(co2,lag.max = 10,plot = T)+ggplot2::theme_bw()
+```
+
+:::
+
+
+### Non-stationary Process
+- A variable $y_t$ is non-stationary, if it has time varying mean or time varying variance or both  
+- 3 types
+  1. Random Walk without drift
+  1. Random walk with drift
+  1. Random walk with drift and deterministic trend
+
+### Random walk - Simulation {.scrollable}
+::: {.panel-tabset}
+
+### R
+```{r}
+#| echo: true
+#| message: false
+
+# Set-up
+
+alphas<-c(0,0.8,0.98)
+obs<-array(0,200)
+list_rw<-list()
+for(m in 1:3){
+for(i in alphas){
+  for (j in 2:length(obs) ){
+    obs[j]=i*obs[j-1]+rnorm(1)
+  }
+}
+  list_rw[[m]]<-obs
+  
+}
+
+
+#limit calculation
+ymax=max(sapply(list_rw,max))
+ymin=min(sapply(list_rw,min))
+
+#empty plot
+plot(NULL, xlab = "index", ylab = "value", xlim = c(0, length(obs)), ylim = c(ymin,ymax))
+
+#plot lines
+for(i in seq_along(list_rw)){
+  lines(x=1:200,y=list_rw[[i]], type = "l", lty = 1, col = i +1 )
+}
+
+# Legends
+legend("bottomright", legend = paste0("alpha = ", alphas), lty = 1, col = 1 + seq_along(alphas))
+
+```
+
+### Python
+```{python}
+#| echo: true
+#| message: false
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+α=[0,0.8,0.98]
+T = 200
+x = [0]*(T+1)
+ϵ=np.random.randn(T)
+for j in α:
+    x[0] = 0
+    for i in range(T):
+         x[i+1]=j *x[i]+ϵ[i]
+    plt.plot(x, label=f'$\\alpha = {j}$')
+
+plt.legend()
+plt.show()
+```
+
+:::
