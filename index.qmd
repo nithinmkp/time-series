@@ -405,5 +405,8 @@ ggPacf(ts_MA,lag.max=10)
 
 :::
 
+::: {.notes}
+The $p^{\text {th }}$ partial autcorrelation is the $p^{\text {th }}$ coefficient of linear regression of $y_{+}$on its lags up to $p$ :
+:::
 ### Formal identification (Cont.)
 ![Summary of Patterns to look for](sum_acf.png)
