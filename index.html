@@ -404,6 +404,14 @@
   <p class="author">Department of Humanities and Social Sciences</p>
   <p class="author">Indian Institute of Technology Kharagpur</p>
 </section>
+<section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Outline</h2>
+<ul>
+<li class="fragment"><a href="#/univariate-time-series">Univariate Time Series</a></li>
+</ul>
+</nav>
+</section>
 
 <section id="introduction" class="slide level3">
 <h3>Introduction</h3>
@@ -528,24 +536,24 @@
 </details>
 <div class="cell-output-stdout">
 <pre><code>             Jan         Feb         Mar         Apr         May         Jun
-1990  2.22243880  2.87848202  2.72725960  2.07268937 -0.12884917  3.70853945
-1991  2.72809216  1.65362036  3.85562901  2.72381281  3.16473430  3.52055029
-1992  1.36950126  2.09174120  1.03979539  0.74310333  0.77374817  1.72803984
-1993  3.05523407  2.52643057  1.36970535  0.93291835  0.90832950  1.73361682
-1994  1.18239846  4.57457886  4.27141813  1.13579667  1.92414166  0.88563672
-1995  1.32406911  2.74515406  2.60054200  1.87452304  0.73176148  2.36883902
-1996  2.93576566  2.20922613 -0.69000674  1.48129983  2.00909661  2.94203178
-1997  2.24402501  1.91189516  0.55234285  2.84643132  2.36156139  2.93806442
-1998  1.79386529  1.31861497  1.31618382  2.61474438                        
+1990  2.61054301  0.50836190  2.13727532  1.73053872  0.37953053 -0.04839599
+1991  1.87342749  2.28274341  1.82900076  2.08365622  1.32186421  1.09856584
+1992  1.42142790  2.44391131  3.35684392  1.88177683  1.63586328  2.00217510
+1993  1.65643839  1.27852076  1.86945928  3.42828148  1.31689931  0.80849735
+1994  1.98957060  2.21989553  2.47327293  3.48806628  2.34075715  2.62756813
+1995  3.02684863  3.34285997  2.14854004  1.85420078  1.28608588  3.28168963
+1996  2.15761572  2.21119449  1.39094764  0.97565809  0.18629855  1.77396884
+1997  1.64247393  3.02082267  2.89788924  3.68794975  0.91152784  2.81940946
+1998  2.12687743  1.43439376  0.55947218  2.82648411                        
              Jul         Aug         Sep         Oct         Nov         Dec
-1990  1.41034585  0.82800492  0.91890868  3.36389389  1.87293664  0.68285915
-1991  2.70965993  2.19150016  1.32413248  1.97688494 -0.67074998  3.35301687
-1992  3.21691707  3.35742347 -0.07801177  1.84120945  2.26003458  2.65513092
-1993  1.96462394  3.37341072  3.28803874  1.47249784  3.36078424  2.96365774
-1994  1.85401922  1.27099447  3.86231533  1.93041796  2.45628507  2.00536802
-1995  2.63072424  2.48664589  1.05059083  0.51235279  1.34167825  1.75896723
-1996  3.49698516  3.33857375  2.24413944  1.63085450  1.09447367  2.33399361
-1997  3.09552627  0.04985999  0.50698327  2.47476957  1.18248276  0.25058890
+1990  1.60941494  2.42821529  2.25662110  2.73911579  0.57519269  1.74172516
+1991  2.95913583  2.58183924  0.32186446  0.51573770  1.12484311  1.81061883
+1992  2.29910841  0.39604647  3.44843776  2.50876076  2.46009033  0.02865232
+1993  2.12452867  3.61515032  2.50866771  2.61935859  2.45172437  2.07310925
+1994  2.11186023  1.87500336  0.13777172  2.23147595  1.05520922  3.14442173
+1995  0.47675968  3.29653936  2.75163170  1.65578259  1.26673411  0.09548863
+1996  2.44581437 -0.21312324  2.84877926  1.82135609  2.05899280  3.21040493
+1997  2.12583623  2.10308964  2.70408207  1.52932961  2.22935003  1.99489605
 1998                                                                        </code></pre>
 </div>
 </div>
@@ -576,106 +584,106 @@
 </details>
 <div class="cell-output-stdout">
 <pre><code>                [,1]
-Jan 1990  2.22243880
-Feb 1990  2.87848202
-Mar 1990  2.72725960
-Apr 1990  2.07268937
-May 1990 -0.12884917
-Jun 1990  3.70853945
-Jul 1990  1.41034585
-Aug 1990  0.82800492
-Sep 1990  0.91890868
-Oct 1990  3.36389389
-Nov 1990  1.87293664
-Dec 1990  0.68285915
-Jan 1991  2.72809216
-Feb 1991  1.65362036
-Mar 1991  3.85562901
-Apr 1991  2.72381281
-May 1991  3.16473430
-Jun 1991  3.52055029
-Jul 1991  2.70965993
-Aug 1991  2.19150016
-Sep 1991  1.32413248
-Oct 1991  1.97688494
-Nov 1991 -0.67074998
-Dec 1991  3.35301687
-Jan 1992  1.36950126
-Feb 1992  2.09174120
-Mar 1992  1.03979539
-Apr 1992  0.74310333
-May 1992  0.77374817
-Jun 1992  1.72803984
-Jul 1992  3.21691707
-Aug 1992  3.35742347
-Sep 1992 -0.07801177
-Oct 1992  1.84120945
-Nov 1992  2.26003458
-Dec 1992  2.65513092
-Jan 1993  3.05523407
-Feb 1993  2.52643057
-Mar 1993  1.36970535
-Apr 1993  0.93291835
-May 1993  0.90832950
-Jun 1993  1.73361682
-Jul 1993  1.96462394
-Aug 1993  3.37341072
-Sep 1993  3.28803874
-Oct 1993  1.47249784
-Nov 1993  3.36078424
-Dec 1993  2.96365774
-Jan 1994  1.18239846
-Feb 1994  4.57457886
-Mar 1994  4.27141813
-Apr 1994  1.13579667
-May 1994  1.92414166
-Jun 1994  0.88563672
-Jul 1994  1.85401922
-Aug 1994  1.27099447
-Sep 1994  3.86231533
-Oct 1994  1.93041796
-Nov 1994  2.45628507
-Dec 1994  2.00536802
-Jan 1995  1.32406911
-Feb 1995  2.74515406
-Mar 1995  2.60054200
-Apr 1995  1.87452304
-May 1995  0.73176148
-Jun 1995  2.36883902
-Jul 1995  2.63072424
-Aug 1995  2.48664589
-Sep 1995  1.05059083
-Oct 1995  0.51235279
-Nov 1995  1.34167825
-Dec 1995  1.75896723
-Jan 1996  2.93576566
-Feb 1996  2.20922613
-Mar 1996 -0.69000674
-Apr 1996  1.48129983
-May 1996  2.00909661
-Jun 1996  2.94203178
-Jul 1996  3.49698516
-Aug 1996  3.33857375
-Sep 1996  2.24413944
-Oct 1996  1.63085450
-Nov 1996  1.09447367
-Dec 1996  2.33399361
-Jan 1997  2.24402501
-Feb 1997  1.91189516
-Mar 1997  0.55234285
-Apr 1997  2.84643132
-May 1997  2.36156139
-Jun 1997  2.93806442
-Jul 1997  3.09552627
-Aug 1997  0.04985999
-Sep 1997  0.50698327
-Oct 1997  2.47476957
-Nov 1997  1.18248276
-Dec 1997  0.25058890
-Jan 1998  1.79386529
-Feb 1998  1.31861497
-Mar 1998  1.31618382
-Apr 1998  2.61474438</code></pre>
+Jan 1990  2.61054301
+Feb 1990  0.50836190
+Mar 1990  2.13727532
+Apr 1990  1.73053872
+May 1990  0.37953053
+Jun 1990 -0.04839599
+Jul 1990  1.60941494
+Aug 1990  2.42821529
+Sep 1990  2.25662110
+Oct 1990  2.73911579
+Nov 1990  0.57519269
+Dec 1990  1.74172516
+Jan 1991  1.87342749
+Feb 1991  2.28274341
+Mar 1991  1.82900076
+Apr 1991  2.08365622
+May 1991  1.32186421
+Jun 1991  1.09856584
+Jul 1991  2.95913583
+Aug 1991  2.58183924
+Sep 1991  0.32186446
+Oct 1991  0.51573770
+Nov 1991  1.12484311
+Dec 1991  1.81061883
+Jan 1992  1.42142790
+Feb 1992  2.44391131
+Mar 1992  3.35684392
+Apr 1992  1.88177683
+May 1992  1.63586328
+Jun 1992  2.00217510
+Jul 1992  2.29910841
+Aug 1992  0.39604647
+Sep 1992  3.44843776
+Oct 1992  2.50876076
+Nov 1992  2.46009033
+Dec 1992  0.02865232
+Jan 1993  1.65643839
+Feb 1993  1.27852076
+Mar 1993  1.86945928
+Apr 1993  3.42828148
+May 1993  1.31689931
+Jun 1993  0.80849735
+Jul 1993  2.12452867
+Aug 1993  3.61515032
+Sep 1993  2.50866771
+Oct 1993  2.61935859
+Nov 1993  2.45172437
+Dec 1993  2.07310925
+Jan 1994  1.98957060
+Feb 1994  2.21989553
+Mar 1994  2.47327293
+Apr 1994  3.48806628
+May 1994  2.34075715
+Jun 1994  2.62756813
+Jul 1994  2.11186023
+Aug 1994  1.87500336
+Sep 1994  0.13777172
+Oct 1994  2.23147595
+Nov 1994  1.05520922
+Dec 1994  3.14442173
+Jan 1995  3.02684863
+Feb 1995  3.34285997
+Mar 1995  2.14854004
+Apr 1995  1.85420078
+May 1995  1.28608588
+Jun 1995  3.28168963
+Jul 1995  0.47675968
+Aug 1995  3.29653936
+Sep 1995  2.75163170
+Oct 1995  1.65578259
+Nov 1995  1.26673411
+Dec 1995  0.09548863
+Jan 1996  2.15761572
+Feb 1996  2.21119449
+Mar 1996  1.39094764
+Apr 1996  0.97565809
+May 1996  0.18629855
+Jun 1996  1.77396884
+Jul 1996  2.44581437
+Aug 1996 -0.21312324
+Sep 1996  2.84877926
+Oct 1996  1.82135609
+Nov 1996  2.05899280
+Dec 1996  3.21040493
+Jan 1997  1.64247393
+Feb 1997  3.02082267
+Mar 1997  2.89788924
+Apr 1997  3.68794975
+May 1997  0.91152784
+Jun 1997  2.81940946
+Jul 1997  2.12583623
+Aug 1997  2.10308964
+Sep 1997  2.70408207
+Oct 1997  1.52932961
+Nov 1997  2.22935003
+Dec 1997  1.99489605
+Jan 1998  2.12687743
+Feb 1998  1.43439376
+Mar 1998  0.55947218
+Apr 1998  2.82648411</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -856,10 +864,176 @@ Autocorrelations of series 'AirPassengers', by lag
 </div>
 </div>
 </div>
-<div class="footer footer-default">
+</section>
+<section id="integrated-stochastic-process" class="slide level3">
+<h3>Integrated Stochastic Process</h3>
+<ul>
+<li class="fragment"><p>RWP is non-stationary but its first difference is stationary <span class="math display">\[\begin{equation}
+\begin{aligned}
+&amp;y_{t}=y_{t-1}+u_{t} \\
+&amp;\Delta y_{t}=u_{t}
+\end{aligned}
+\end{equation}\]</span></p></li>
+<li class="fragment"><p><span class="math inline">\(y_t\)</span> is said to be integrated of order 1 (<span class="math inline">\(y_{t} \sim I(1)\)</span>)</p></li>
+<li class="fragment"><p>simillarly, <span class="math inline">\(y_t \sim I(2)\)</span> if <span class="math inline">\(\Delta^{2} y_{t}=u_{t}\)</span></p></li>
+</ul>
+<aside class="notes">
+<p>introduce lag operator</p>
+<p><span class="math inline">\(Ly_t= y_{t-1}\)</span></p>
+<p><span class="math display">\[
+y_{t}^{\prime}=y_{t}-y_{t-1}=y_{t}-L y_{t}=(1-L) y_{t}
+\]</span></p>
+</aside>
+</section>
+<section>
+<section id="univariate-time-series" class="title-slide slide level2 center">
+<h2>Univariate Time Series</h2>
 
+</section>
+<section id="stationary-time-series" class="slide level3">
+<h3>Stationary Time Series</h3>
+<ul>
+<li class="fragment">3 important process
+<ol type="1">
+<li class="fragment"><p>Moving Average (MA) <span class="math display">\[
+y_{t}=\mu+u_{t}+\phi_{1} u_{t-1}+\phi_{2} u_{t-2}+\ldots+\phi_{t} u_{t}
+\]</span></p></li>
+<li class="fragment"><p>Autoregressive (AR) <span class="math display">\[
+y_{t}=a+b_{1} y_{t-1}+b_{2} y_{t-2}+\ldots .+b_{p} y_{t}+\varepsilon_{t}
+\]</span></p></li>
+<li class="fragment"><p>ARMA Process <span class="math display">\[
+\begin{aligned}
+&amp;y_{t}=a+b_{1}y_{t-1}+b_{2}y_{t-2}+\ldots+b_{p}y_{t-p} \\
+&amp;+u_{t}+\phi_{1} u_{t-1}+\phi_{2} u_{t-2}+\ldots+\phi_{q} u_{t-q}
+\end{aligned}
+\]</span></p></li>
+</ol></li>
+</ul>
+</section>
+<section id="steps-in-analysis-of-stationary-series" class="slide level3 scrollable">
+<h3>Steps in analysis of stationary series</h3>
+<ol type="1">
+<li class="fragment">Identification
+<ul>
+<li class="fragment">visual inspection</li>
+</ul></li>
+</ol>
+<div class="fragment">
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">AR(1) process</a></li><li><a href="#tabset-5-2">MA (1) process</a></li><li><a href="#tabset-5-3">ARMA process</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb16-2"><a href="#cb16-2"></a>ts_AR <span class="ot">&lt;-</span> <span class="fu">arima.sim</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="fu">list</span>(<span class="at">ar =</span> <span class="fl">0.7</span>))</span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">plot</span>(ts_AR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-13-3.png" width="960"></p>
+</div>
+</div>
+</div>
+<div id="tabset-5-2">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb17-2"><a href="#cb17-2"></a>ts_MA<span class="ot">&lt;-</span><span class="fu">arima.sim</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="fu">list</span>(<span class="at">ma =</span> <span class="fl">0.7</span>))</span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="fu">plot</span>(ts_MA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</div>
+</div>
+</div>
+<div id="tabset-5-3">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb18-2"><a href="#cb18-2"></a>ts_ARMA<span class="ot">&lt;-</span><span class="fu">arima.sim</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="fu">list</span>(<span class="at">ar=</span><span class="fl">0.5</span>,<span class="at">ma =</span> <span class="fl">0.3</span>))</span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="fu">plot</span>(ts_ARMA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
+<section id="formal-identification" class="slide level3">
+<h3>Formal identification</h3>
+<h4 id="autocorrelation-function">Autocorrelation Function</h4>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">AR(1) process</a></li><li><a href="#tabset-6-2">MA(1) process</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggAcf</span>(ts_AR,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+</div>
+</div>
+</div>
+<div id="tabset-6-2">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggAcf</span>(ts_MA,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="formal-identification-cont." class="slide level3">
+<h3>Formal identification (Cont.)</h3>
+<h4 id="partial-autocorrelation-function">Partial Autocorrelation Function</h4>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">AR(1) process</a></li><li><a href="#tabset-7-2">MA(1) process</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggPacf</span>(ts_AR,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+</div>
+</div>
+</div>
+<div id="tabset-7-2">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggPacf</span>(ts_MA,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="formal-identification-cont.-1" class="slide level3">
+<h3>Formal identification (Cont.)</h3>
+
+<img data-src="sum_acf.png" class="r-stretch quarto-figure-center"><p class="caption">Summary of Patterns to look for</p><div class="footer footer-default">
+
+</div>
+</section></section>
     </div>
   </div>
 

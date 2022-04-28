@@ -285,3 +285,125 @@ plt.show()
 ```
 
 :::
+
+### Integrated Stochastic Process
+- RWP is non-stationary but its first difference is stationary
+\begin{equation}
+\begin{aligned}
+&y_{t}=y_{t-1}+u_{t} \\
+&\Delta y_{t}=u_{t}
+\end{aligned}
+\end{equation}
+
+- $y_t$ is said to be integrated of order 1 ($y_{t} \sim I(1)$)
+-  simillarly,  $y_t \sim I(2)$ if $\Delta^{2} y_{t}=u_{t}$
+
+::: {.notes}
+introduce lag operator
+
+$Ly_t= y_{t-1}$
+
+$$
+y_{t}^{\prime}=y_{t}-y_{t-1}=y_{t}-L y_{t}=(1-L) y_{t}
+$$
+:::
+
+## Univariate Time Series
+### Stationary Time Series
+- 3 important process
+  1. Moving Average (MA)
+  $$
+y_{t}=\mu+u_{t}+\phi_{1} u_{t-1}+\phi_{2} u_{t-2}+\ldots+\phi_{t} u_{t}
+$$
+
+  1. Autoregressive (AR)
+  $$
+y_{t}=a+b_{1} y_{t-1}+b_{2} y_{t-2}+\ldots .+b_{p} y_{t}+\varepsilon_{t}
+$$
+
+  1. ARMA Process
+  $$
+\begin{aligned}
+&y_{t}=a+b_{1}y_{t-1}+b_{2}y_{t-2}+\ldots+b_{p}y_{t-p} \\
+&+u_{t}+\phi_{1} u_{t-1}+\phi_{2} u_{t-2}+\ldots+\phi_{q} u_{t-q}
+\end{aligned}
+$$
+
+### Steps in analysis of stationary series {.scrollable}
+1. Identification
+   - visual inspection
+
+. . .
+
+::: {.panel-tabset}
+
+### AR(1) process
+
+```{r}
+#| echo: true
+set.seed(123)
+ts_AR <- arima.sim(n = 500, list(ar = 0.7))
+plot(ts_AR)
+```
+
+### MA (1) process
+```{r}
+#| echo: true
+set.seed(123)
+ts_MA<-arima.sim(n = 500, list(ma = 0.7))
+plot(ts_MA)
+```
+
+### ARMA process
+```{r}
+#| echo: true
+set.seed(123)
+ts_ARMA<-arima.sim(n = 500, list(ar=0.5,ma = 0.3))
+plot(ts_ARMA)
+```
+:::
+
+### Formal identification 
+
+#### Autocorrelation Function
+
+::: {.panel-tabset}
+
+### AR(1) process
+
+```{r}
+#| echo: true
+ggAcf(ts_AR,lag.max=10)
+```
+### MA(1) process
+
+```{r}
+#| echo: true
+ggAcf(ts_MA,lag.max=10)
+```
+
+:::
+
+### Formal identification (Cont.)
+
+#### Partial Autocorrelation Function
+
+::: {.panel-tabset}
+
+### AR(1) process
+
+```{r}
+#| echo: true
+ggPacf(ts_AR,lag.max=10)
+```
+### MA(1) process
+
+```{r}
+#| echo: true
+ggPacf(ts_MA,lag.max=10)
+```
+
+:::
+
+### Formal identification (Cont.)
+![Summary of Patterns to look for](sum_acf.png)
