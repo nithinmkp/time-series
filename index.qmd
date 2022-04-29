@@ -77,6 +77,8 @@ plot(decompose(AirPassengers))
 
 
 ::: {.notes}
+- $y(\omega,t)$
+- remeber the bell shape from edx
 - cannot be accurately predicted
 :::
 
@@ -89,6 +91,12 @@ a discrete stochastic series is stationary if
 &E\left[\left(y_{t}-\mu\right)\left(y_{t+k}-\mu\right)\right]=r_{k}
 \end{aligned}
 \end{equation}
+
+::: {.notes}
+- mention strong form of stationarity
+- join distribution is time invariant
+
+:::
 
 ### White Noise Process
 - sequence of uncorrelated random variables from a fixed distribution
@@ -397,13 +405,13 @@ plt.show()
 - RWP is non-stationary but its first difference is stationary
 \begin{equation}
 \begin{aligned}
-&y_{t}=y_{t-1}+u_{t} \\
-&\Delta y_{t}=u_{t}
+&y_{t}=y_{t-1}+\varepsilon_{t} \\
+&\Delta y_{t}=\varepsilon_{t}
 \end{aligned}
 \end{equation}
 
 - $y_t$ is said to be integrated of order 1 ($y_{t} \sim I(1)$)
--  simillarly,  $y_t \sim I(2)$ if $\Delta^{2} y_{t}=u_{t}$
+-  simillarly,  $y_t \sim I(2)$ if $\Delta^{2} y_{t}=\varepsilon_{t}$
 
 ::: {.notes}
 introduce lag operator
@@ -433,3 +441,11 @@ $$
   - DF GLS test
 - Unit root with structural breaks
 - KPSS stationarity test
+
+## Where do we go from here??
+
+### Advanced Topics
+- ARIMA models
+- Modelling Volatility-  ARCH/GARCH class of models
+- Multivariate time series - VAR/VECM
+- Non-linear time series - TAR/SETAR, MRS, KF
