@@ -279,7 +279,7 @@ plot(ts_ARMA)
 ```
 :::
 
-### Formal identification 
+### Formal identification {.scrollable}
 
 #### Autocorrelation Function
 
@@ -300,7 +300,7 @@ ggAcf(ts_MA,lag.max=10)
 
 :::
 
-### Formal identification (Cont.)
+### Formal identification (Cont.) {.scrollable}
 
 #### Partial Autocorrelation Function
 
