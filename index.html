@@ -404,14 +404,6 @@
   <p class="author">Department of Humanities and Social Sciences</p>
   <p class="author">Indian Institute of Technology Kharagpur</p>
 </section>
-<section id="TOC">
-<nav role="doc-toc"> 
-<h2 id="toc-title">Outline</h2>
-<ul>
-<li class="fragment"><a href="#/univariate-time-series">Univariate Time Series</a></li>
-</ul>
-</nav>
-</section>
 
 <section id="introduction" class="slide level3">
 <h3>Introduction</h3>
@@ -536,24 +528,24 @@
 </details>
 <div class="cell-output-stdout">
 <pre><code>             Jan         Feb         Mar         Apr         May         Jun
-1990  1.43843673  1.48488437  1.86575891  3.39151574  3.26392289  0.67404423
-1991  1.24036523  1.51163233  2.22529730  1.81694672  0.52665612  1.23088748
-1992  4.45610598  1.29832468 -0.47557424  0.29081585  0.82288757  1.09825736
-1993  4.60899423  1.58075829  0.57922083  2.24413612  1.56097183 -0.39471021
-1994  2.19125234  4.23572320  1.39723526  0.25103275  1.46749006  1.60597407
-1995  0.90059748  3.75617413  3.00740841  2.58845476  2.36680267  3.75872995
-1996  0.33770797  2.53051762  2.00458464  3.09271674  3.08964370  1.34343612
-1997  1.69463026  1.20424776  4.19515873  2.05497825  1.85867529  1.82311424
-1998  1.84685085  1.87940383  1.03557173  1.04499688                        
+1990  4.39566284  2.97780732  1.26814033  2.49079320  1.17939126  0.93970484
+1991  1.77485084  1.08690348  1.39824882  2.78507201  1.05965241  2.66509314
+1992  1.08532522  2.84492953  1.51757164  1.58568253  2.25306510  2.10560295
+1993  3.28197981  0.45935504  2.37304760  2.89912197  2.79237089  1.87408698
+1994  2.58735286  3.16823703  1.75817503  2.11068830  3.21749532  1.88302673
+1995  2.66174816  3.21190219  2.91770645  2.19190065  1.79242950  0.89776449
+1996  2.44351010  1.25270402  2.41345380  3.14973534  2.29526471  1.91885416
+1997  2.99948846  2.27093986  0.53314144  2.13977070  1.44570271  2.53874938
+1998  0.93648446  2.24660631  2.99776556  1.56689323                        
              Jul         Aug         Sep         Oct         Nov         Dec
-1990  0.67732884  3.01311671  2.18934993  1.87356038  1.53347100  1.86778507
-1991  2.40700543  1.40230472  1.82018180  1.64033959  1.97038181  0.39476569
-1992  2.17886477  3.78319026  2.07338146  2.31888448  2.18494986  3.14252109
-1993  1.83329606  0.84112734  2.16149479  0.95719310  3.19184814  4.54022618
-1994  2.88768793  3.04244189  0.06017585  4.24706875  0.35226040  1.95292728
-1995  0.55499598  1.72638034  2.76390322  2.24859160  1.03187930  2.92506429
-1996  1.37957284  3.53896489  2.25876505  2.34222765  1.96718255  0.76630450
-1997  2.26253906  0.51870401  1.27093117  3.01136504  2.33238220  3.15492681
+1990  0.19622094  1.42469243  2.43170323  3.30378937  0.17507294  3.18412248
+1991  1.80648623  1.86976772  2.87066277  0.61759387  2.88863623  2.34590389
+1992  0.08518027  3.97083832  3.71433928  1.34002525  3.18846589  1.27146195
+1993  1.89549311  1.87502248  0.89938997  0.92509203  1.19713739  1.87127965
+1994 -0.37833061  2.95419017  0.88320849  2.67074018  2.86614702  3.19309591
+1995  1.38140993  1.31271487  0.74445787  1.21688762  2.19712181  1.91565443
+1996  2.94224251  2.78819842  3.19054786  1.09678727  1.30794725  2.11361644
+1997  3.96608563  2.16465733  1.66011331  0.83249753  1.72123334  1.29613305
 1998                                                                        </code></pre>
 </div>
 </div>
@@ -584,106 +576,106 @@
 </details>
 <div class="cell-output-stdout">
 <pre><code>                [,1]
-Jan 1990  1.43843673
-Feb 1990  1.48488437
-Mar 1990  1.86575891
-Apr 1990  3.39151574
-May 1990  3.26392289
-Jun 1990  0.67404423
-Jul 1990  0.67732884
-Aug 1990  3.01311671
-Sep 1990  2.18934993
-Oct 1990  1.87356038
-Nov 1990  1.53347100
-Dec 1990  1.86778507
-Jan 1991  1.24036523
-Feb 1991  1.51163233
-Mar 1991  2.22529730
-Apr 1991  1.81694672
-May 1991  0.52665612
-Jun 1991  1.23088748
-Jul 1991  2.40700543
-Aug 1991  1.40230472
-Sep 1991  1.82018180
-Oct 1991  1.64033959
-Nov 1991  1.97038181
-Dec 1991  0.39476569
-Jan 1992  4.45610598
-Feb 1992  1.29832468
-Mar 1992 -0.47557424
-Apr 1992  0.29081585
-May 1992  0.82288757
-Jun 1992  1.09825736
-Jul 1992  2.17886477
-Aug 1992  3.78319026
-Sep 1992  2.07338146
-Oct 1992  2.31888448
-Nov 1992  2.18494986
-Dec 1992  3.14252109
-Jan 1993  4.60899423
-Feb 1993  1.58075829
-Mar 1993  0.57922083
-Apr 1993  2.24413612
-May 1993  1.56097183
-Jun 1993 -0.39471021
-Jul 1993  1.83329606
-Aug 1993  0.84112734
-Sep 1993  2.16149479
-Oct 1993  0.95719310
-Nov 1993  3.19184814
-Dec 1993  4.54022618
-Jan 1994  2.19125234
-Feb 1994  4.23572320
-Mar 1994  1.39723526
-Apr 1994  0.25103275
-May 1994  1.46749006
-Jun 1994  1.60597407
-Jul 1994  2.88768793
-Aug 1994  3.04244189
-Sep 1994  0.06017585
-Oct 1994  4.24706875
-Nov 1994  0.35226040
-Dec 1994  1.95292728
-Jan 1995  0.90059748
-Feb 1995  3.75617413
-Mar 1995  3.00740841
-Apr 1995  2.58845476
-May 1995  2.36680267
-Jun 1995  3.75872995
-Jul 1995  0.55499598
-Aug 1995  1.72638034
-Sep 1995  2.76390322
-Oct 1995  2.24859160
-Nov 1995  1.03187930
-Dec 1995  2.92506429
-Jan 1996  0.33770797
-Feb 1996  2.53051762
-Mar 1996  2.00458464
-Apr 1996  3.09271674
-May 1996  3.08964370
-Jun 1996  1.34343612
-Jul 1996  1.37957284
-Aug 1996  3.53896489
-Sep 1996  2.25876505
-Oct 1996  2.34222765
-Nov 1996  1.96718255
-Dec 1996  0.76630450
-Jan 1997  1.69463026
-Feb 1997  1.20424776
-Mar 1997  4.19515873
-Apr 1997  2.05497825
-May 1997  1.85867529
-Jun 1997  1.82311424
-Jul 1997  2.26253906
-Aug 1997  0.51870401
-Sep 1997  1.27093117
-Oct 1997  3.01136504
-Nov 1997  2.33238220
-Dec 1997  3.15492681
-Jan 1998  1.84685085
-Feb 1998  1.87940383
-Mar 1998  1.03557173
-Apr 1998  1.04499688</code></pre>
+Jan 1990  4.39566284
+Feb 1990  2.97780732
+Mar 1990  1.26814033
+Apr 1990  2.49079320
+May 1990  1.17939126
+Jun 1990  0.93970484
+Jul 1990  0.19622094
+Aug 1990  1.42469243
+Sep 1990  2.43170323
+Oct 1990  3.30378937
+Nov 1990  0.17507294
+Dec 1990  3.18412248
+Jan 1991  1.77485084
+Feb 1991  1.08690348
+Mar 1991  1.39824882
+Apr 1991  2.78507201
+May 1991  1.05965241
+Jun 1991  2.66509314
+Jul 1991  1.80648623
+Aug 1991  1.86976772
+Sep 1991  2.87066277
+Oct 1991  0.61759387
+Nov 1991  2.88863623
+Dec 1991  2.34590389
+Jan 1992  1.08532522
+Feb 1992  2.84492953
+Mar 1992  1.51757164
+Apr 1992  1.58568253
+May 1992  2.25306510
+Jun 1992  2.10560295
+Jul 1992  0.08518027
+Aug 1992  3.97083832
+Sep 1992  3.71433928
+Oct 1992  1.34002525
+Nov 1992  3.18846589
+Dec 1992  1.27146195
+Jan 1993  3.28197981
+Feb 1993  0.45935504
+Mar 1993  2.37304760
+Apr 1993  2.89912197
+May 1993  2.79237089
+Jun 1993  1.87408698
+Jul 1993  1.89549311
+Aug 1993  1.87502248
+Sep 1993  0.89938997
+Oct 1993  0.92509203
+Nov 1993  1.19713739
+Dec 1993  1.87127965
+Jan 1994  2.58735286
+Feb 1994  3.16823703
+Mar 1994  1.75817503
+Apr 1994  2.11068830
+May 1994  3.21749532
+Jun 1994  1.88302673
+Jul 1994 -0.37833061
+Aug 1994  2.95419017
+Sep 1994  0.88320849
+Oct 1994  2.67074018
+Nov 1994  2.86614702
+Dec 1994  3.19309591
+Jan 1995  2.66174816
+Feb 1995  3.21190219
+Mar 1995  2.91770645
+Apr 1995  2.19190065
+May 1995  1.79242950
+Jun 1995  0.89776449
+Jul 1995  1.38140993
+Aug 1995  1.31271487
+Sep 1995  0.74445787
+Oct 1995  1.21688762
+Nov 1995  2.19712181
+Dec 1995  1.91565443
+Jan 1996  2.44351010
+Feb 1996  1.25270402
+Mar 1996  2.41345380
+Apr 1996  3.14973534
+May 1996  2.29526471
+Jun 1996  1.91885416
+Jul 1996  2.94224251
+Aug 1996  2.78819842
+Sep 1996  3.19054786
+Oct 1996  1.09678727
+Nov 1996  1.30794725
+Dec 1996  2.11361644
+Jan 1997  2.99948846
+Feb 1997  2.27093986
+Mar 1997  0.53314144
+Apr 1997  2.13977070
+May 1997  1.44570271
+Jun 1997  2.53874938
+Jul 1997  3.96608563
+Aug 1997  2.16465733
+Sep 1997  1.66011331
+Oct 1997  0.83249753
+Nov 1997  1.72123334
+Dec 1997  1.29613305
+Jan 1998  0.93648446
+Feb 1998  2.24660631
+Mar 1998  2.99776556
+Apr 1998  1.56689323</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -779,112 +771,6 @@ Autocorrelations of series 'AirPassengers', by lag
 </div>
 </div>
 </section>
-<section id="non-stationary-process" class="slide level3">
-<h3>Non-stationary Process</h3>
-<ul>
-<li class="fragment">A variable <span class="math inline">\(y_t\)</span> is non-stationary, if it has time varying mean or time varying variance or both<br>
-</li>
-<li class="fragment">3 types
-<ol type="1">
-<li class="fragment">Random Walk without drift</li>
-<li class="fragment">Random walk with drift</li>
-<li class="fragment">Random walk with drift and deterministic trend</li>
-</ol></li>
-</ul>
-</section>
-<section id="random-walk---simulation" class="slide level3 scrollable">
-<h3>Random walk - Simulation</h3>
-<div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">R</a></li><li><a href="#tabset-4-2">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1">
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Set-up</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a></span>
-<span id="cb14-3"><a href="#cb14-3"></a>alphas<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.98</span>)</span>
-<span id="cb14-4"><a href="#cb14-4"></a>obs<span class="ot">&lt;-</span><span class="fu">array</span>(<span class="dv">0</span>,<span class="dv">200</span>)</span>
-<span id="cb14-5"><a href="#cb14-5"></a>list_rw<span class="ot">&lt;-</span><span class="fu">list</span>()</span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="cf">for</span>(m <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
-<span id="cb14-7"><a href="#cb14-7"></a><span class="cf">for</span>(i <span class="cf">in</span> alphas){</span>
-<span id="cb14-8"><a href="#cb14-8"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="fu">length</span>(obs) ){</span>
-<span id="cb14-9"><a href="#cb14-9"></a>    obs[j]<span class="ot">=</span>i<span class="sc">*</span>obs[j<span class="dv">-1</span>]<span class="sc">+</span><span class="fu">rnorm</span>(<span class="dv">1</span>)</span>
-<span id="cb14-10"><a href="#cb14-10"></a>  }</span>
-<span id="cb14-11"><a href="#cb14-11"></a>}</span>
-<span id="cb14-12"><a href="#cb14-12"></a>  list_rw[[m]]<span class="ot">&lt;-</span>obs</span>
-<span id="cb14-13"><a href="#cb14-13"></a>  </span>
-<span id="cb14-14"><a href="#cb14-14"></a>}</span>
-<span id="cb14-15"><a href="#cb14-15"></a></span>
-<span id="cb14-16"><a href="#cb14-16"></a></span>
-<span id="cb14-17"><a href="#cb14-17"></a><span class="co">#limit calculation</span></span>
-<span id="cb14-18"><a href="#cb14-18"></a>ymax<span class="ot">=</span><span class="fu">max</span>(<span class="fu">sapply</span>(list_rw,max))</span>
-<span id="cb14-19"><a href="#cb14-19"></a>ymin<span class="ot">=</span><span class="fu">min</span>(<span class="fu">sapply</span>(list_rw,min))</span>
-<span id="cb14-20"><a href="#cb14-20"></a></span>
-<span id="cb14-21"><a href="#cb14-21"></a><span class="co">#empty plot</span></span>
-<span id="cb14-22"><a href="#cb14-22"></a><span class="fu">plot</span>(<span class="cn">NULL</span>, <span class="at">xlab =</span> <span class="st">"index"</span>, <span class="at">ylab =</span> <span class="st">"value"</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">length</span>(obs)), <span class="at">ylim =</span> <span class="fu">c</span>(ymin,ymax))</span>
-<span id="cb14-23"><a href="#cb14-23"></a></span>
-<span id="cb14-24"><a href="#cb14-24"></a><span class="co">#plot lines</span></span>
-<span id="cb14-25"><a href="#cb14-25"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq_along</span>(list_rw)){</span>
-<span id="cb14-26"><a href="#cb14-26"></a>  <span class="fu">lines</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">200</span>,<span class="at">y=</span>list_rw[[i]], <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">lty =</span> <span class="dv">1</span>, <span class="at">col =</span> i <span class="sc">+</span><span class="dv">1</span> )</span>
-<span id="cb14-27"><a href="#cb14-27"></a>}</span>
-<span id="cb14-28"><a href="#cb14-28"></a></span>
-<span id="cb14-29"><a href="#cb14-29"></a><span class="co"># Legends</span></span>
-<span id="cb14-30"><a href="#cb14-30"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">legend =</span> <span class="fu">paste0</span>(<span class="st">"alpha = "</span>, alphas), <span class="at">lty =</span> <span class="dv">1</span>, <span class="at">col =</span> <span class="dv">1</span> <span class="sc">+</span> <span class="fu">seq_along</span>(alphas))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
-</div>
-</div>
-</div>
-<div id="tabset-4-2">
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python cell-code number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb15-3"><a href="#cb15-3"></a></span>
-<span id="cb15-4"><a href="#cb15-4"></a>α<span class="op">=</span>[<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.98</span>]</span>
-<span id="cb15-5"><a href="#cb15-5"></a>T <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a>x <span class="op">=</span> [<span class="dv">0</span>]<span class="op">*</span>(T<span class="op">+</span><span class="dv">1</span>)</span>
-<span id="cb15-7"><a href="#cb15-7"></a>ϵ<span class="op">=</span>np.random.randn(T)</span>
-<span id="cb15-8"><a href="#cb15-8"></a><span class="cf">for</span> j <span class="kw">in</span> α:</span>
-<span id="cb15-9"><a href="#cb15-9"></a>    x[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb15-10"><a href="#cb15-10"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(T):</span>
-<span id="cb15-11"><a href="#cb15-11"></a>         x[i<span class="op">+</span><span class="dv">1</span>]<span class="op">=</span>j <span class="op">*</span>x[i]<span class="op">+</span>ϵ[i]</span>
-<span id="cb15-12"><a href="#cb15-12"></a>    plt.plot(x, label<span class="op">=</span><span class="ss">f'$</span><span class="ch">\\</span><span class="ss">alpha = </span><span class="sc">{</span>j<span class="sc">}</span><span class="ss">$'</span>)</span>
-<span id="cb15-13"><a href="#cb15-13"></a></span>
-<span id="cb15-14"><a href="#cb15-14"></a>plt.legend()</span>
-<span id="cb15-15"><a href="#cb15-15"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="integrated-stochastic-process" class="slide level3">
-<h3>Integrated Stochastic Process</h3>
-<ul>
-<li class="fragment"><p>RWP is non-stationary but its first difference is stationary <span class="math display">\[\begin{equation}
-\begin{aligned}
-&amp;y_{t}=y_{t-1}+u_{t} \\
-&amp;\Delta y_{t}=u_{t}
-\end{aligned}
-\end{equation}\]</span></p></li>
-<li class="fragment"><p><span class="math inline">\(y_t\)</span> is said to be integrated of order 1 (<span class="math inline">\(y_{t} \sim I(1)\)</span>)</p></li>
-<li class="fragment"><p>simillarly, <span class="math inline">\(y_t \sim I(2)\)</span> if <span class="math inline">\(\Delta^{2} y_{t}=u_{t}\)</span></p></li>
-</ul>
-<aside class="notes">
-<p>introduce lag operator</p>
-<p><span class="math inline">\(Ly_t= y_{t-1}\)</span></p>
-<p><span class="math display">\[
-y_{t}^{\prime}=y_{t}-y_{t-1}=y_{t}-L y_{t}=(1-L) y_{t}
-\]</span></p>
-</aside>
-</section>
 <section>
 <section id="univariate-time-series" class="title-slide slide level2 center">
 <h2>Univariate Time Series</h2>
@@ -920,44 +806,44 @@ y_{t}=a+b_{1} y_{t-1}+b_{2} y_{t-2}+\ldots .+b_{p} y_{t}+\varepsilon_{t}
 </ol>
 <div class="fragment">
 <div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">AR(1) process</a></li><li><a href="#tabset-5-2">MA (1) process</a></li><li><a href="#tabset-5-3">ARMA process</a></li></ul>
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">AR(1) process</a></li><li><a href="#tabset-4-2">MA (1) process</a></li><li><a href="#tabset-4-3">ARMA process</a></li></ul>
 <div class="tab-content">
-<div id="tabset-5-1">
+<div id="tabset-4-1">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb14-2"><a href="#cb14-2"></a>ts_AR <span class="ot">&lt;-</span> <span class="fu">arima.sim</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="fu">list</span>(<span class="at">ar =</span> <span class="fl">0.7</span>))</span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">plot</span>(ts_AR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+</div>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb15-2"><a href="#cb15-2"></a>ts_MA<span class="ot">&lt;-</span><span class="fu">arima.sim</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="fu">list</span>(<span class="at">ma =</span> <span class="fl">0.7</span>))</span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="fu">plot</span>(ts_MA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</div>
+</div>
+</div>
+<div id="tabset-4-3">
 <div class="cell">
 <details>
 <summary>Code</summary>
 <div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb16-2"><a href="#cb16-2"></a>ts_AR <span class="ot">&lt;-</span> <span class="fu">arima.sim</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="fu">list</span>(<span class="at">ar =</span> <span class="fl">0.7</span>))</span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">plot</span>(ts_AR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-2"><a href="#cb16-2"></a>ts_ARMA<span class="ot">&lt;-</span><span class="fu">arima.sim</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="fu">list</span>(<span class="at">ar=</span><span class="fl">0.5</span>,<span class="at">ma =</span> <span class="fl">0.3</span>))</span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">plot</span>(ts_ARMA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-13-3.png" width="960"></p>
-</div>
-</div>
-</div>
-<div id="tabset-5-2">
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb17-2"><a href="#cb17-2"></a>ts_MA<span class="ot">&lt;-</span><span class="fu">arima.sim</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="fu">list</span>(<span class="at">ma =</span> <span class="fl">0.7</span>))</span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="fu">plot</span>(ts_MA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
-</div>
-</div>
-</div>
-<div id="tabset-5-3">
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb18-2"><a href="#cb18-2"></a>ts_ARMA<span class="ot">&lt;-</span><span class="fu">arima.sim</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="fu">list</span>(<span class="at">ar=</span><span class="fl">0.5</span>,<span class="at">ma =</span> <span class="fl">0.3</span>))</span>
-<span id="cb18-3"><a href="#cb18-3"></a><span class="fu">plot</span>(ts_ARMA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -969,27 +855,27 @@ y_{t}=a+b_{1} y_{t-1}+b_{2} y_{t-2}+\ldots .+b_{p} y_{t}+\varepsilon_{t}
 <h3>Formal identification</h3>
 <h4 id="autocorrelation-function">Autocorrelation Function</h4>
 <div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">AR(1) process</a></li><li><a href="#tabset-6-2">MA(1) process</a></li></ul>
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">AR(1) process</a></li><li><a href="#tabset-5-2">MA(1) process</a></li></ul>
 <div class="tab-content">
-<div id="tabset-6-1">
+<div id="tabset-5-1">
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggAcf</span>(ts_AR,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggAcf</span>(ts_AR,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </div>
 </div>
 </div>
-<div id="tabset-6-2">
+<div id="tabset-5-2">
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggAcf</span>(ts_MA,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggAcf</span>(ts_MA,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -1000,27 +886,27 @@ y_{t}=a+b_{1} y_{t-1}+b_{2} y_{t-2}+\ldots .+b_{p} y_{t}+\varepsilon_{t}
 <h3>Formal identification (Cont.)</h3>
 <h4 id="partial-autocorrelation-function">Partial Autocorrelation Function</h4>
 <div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">AR(1) process</a></li><li><a href="#tabset-7-2">MA(1) process</a></li></ul>
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">AR(1) process</a></li><li><a href="#tabset-6-2">MA(1) process</a></li></ul>
 <div class="tab-content">
-<div id="tabset-7-1">
+<div id="tabset-6-1">
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggPacf</span>(ts_AR,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggPacf</span>(ts_AR,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
 </div>
 </div>
 </div>
-<div id="tabset-7-2">
+<div id="tabset-6-2">
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggPacf</span>(ts_MA,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggPacf</span>(ts_MA,<span class="at">lag.max=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -1033,7 +919,142 @@ y_{t}=a+b_{1} y_{t-1}+b_{2} y_{t-2}+\ldots .+b_{p} y_{t}+\varepsilon_{t}
 <section id="formal-identification-cont.-1" class="slide level3">
 <h3>Formal identification (Cont.)</h3>
 
-<img data-src="sum_acf.png" class="r-stretch quarto-figure-center"><p class="caption">Summary of Patterns to look for</p><div class="footer footer-default">
+<img data-src="sum_acf.png" class="r-stretch quarto-figure-center"><p class="caption">Summary of Patterns to look for</p></section>
+<section id="non-stationary-process" class="slide level3">
+<h3>Non-stationary Process</h3>
+<ul>
+<li class="fragment">A variable <span class="math inline">\(y_t\)</span> is non-stationary, if it has time varying mean or <span style="color:red">time varying variance </span> or both<br>
+</li>
+<li class="fragment">There is no mean reversion</li>
+<li class="fragment">3 types
+<ol type="1">
+<li class="fragment">Random Walk without drift</li>
+<li class="fragment">Random walk with drift</li>
+<li class="fragment">Random walk with drift and deterministic trend</li>
+</ol></li>
+</ul>
+</section>
+<section id="random-walk---simulation" class="slide level3 scrollable">
+<h3>Random walk - Simulation</h3>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">R</a></li><li><a href="#tabset-7-2">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r cell-code number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Set-up</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a></span>
+<span id="cb21-3"><a href="#cb21-3"></a>alphas<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.98</span>)</span>
+<span id="cb21-4"><a href="#cb21-4"></a>obs<span class="ot">&lt;-</span><span class="fu">array</span>(<span class="dv">0</span>,<span class="dv">200</span>)</span>
+<span id="cb21-5"><a href="#cb21-5"></a>list_rw<span class="ot">&lt;-</span><span class="fu">list</span>()</span>
+<span id="cb21-6"><a href="#cb21-6"></a><span class="cf">for</span>(m <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb21-7"><a href="#cb21-7"></a><span class="cf">for</span>(i <span class="cf">in</span> alphas){</span>
+<span id="cb21-8"><a href="#cb21-8"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="fu">length</span>(obs) ){</span>
+<span id="cb21-9"><a href="#cb21-9"></a>    obs[j]<span class="ot">=</span>i<span class="sc">*</span>obs[j<span class="dv">-1</span>]<span class="sc">+</span><span class="fu">rnorm</span>(<span class="dv">1</span>)</span>
+<span id="cb21-10"><a href="#cb21-10"></a>  }</span>
+<span id="cb21-11"><a href="#cb21-11"></a>}</span>
+<span id="cb21-12"><a href="#cb21-12"></a>  list_rw[[m]]<span class="ot">&lt;-</span>obs</span>
+<span id="cb21-13"><a href="#cb21-13"></a>  </span>
+<span id="cb21-14"><a href="#cb21-14"></a>}</span>
+<span id="cb21-15"><a href="#cb21-15"></a></span>
+<span id="cb21-16"><a href="#cb21-16"></a></span>
+<span id="cb21-17"><a href="#cb21-17"></a><span class="co">#limit calculation</span></span>
+<span id="cb21-18"><a href="#cb21-18"></a>ymax<span class="ot">=</span><span class="fu">max</span>(<span class="fu">sapply</span>(list_rw,max))</span>
+<span id="cb21-19"><a href="#cb21-19"></a>ymin<span class="ot">=</span><span class="fu">min</span>(<span class="fu">sapply</span>(list_rw,min))</span>
+<span id="cb21-20"><a href="#cb21-20"></a></span>
+<span id="cb21-21"><a href="#cb21-21"></a><span class="co">#empty plot</span></span>
+<span id="cb21-22"><a href="#cb21-22"></a><span class="fu">plot</span>(<span class="cn">NULL</span>, <span class="at">xlab =</span> <span class="st">"index"</span>, <span class="at">ylab =</span> <span class="st">"value"</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">length</span>(obs)), <span class="at">ylim =</span> <span class="fu">c</span>(ymin,ymax))</span>
+<span id="cb21-23"><a href="#cb21-23"></a></span>
+<span id="cb21-24"><a href="#cb21-24"></a><span class="co">#plot lines</span></span>
+<span id="cb21-25"><a href="#cb21-25"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq_along</span>(list_rw)){</span>
+<span id="cb21-26"><a href="#cb21-26"></a>  <span class="fu">lines</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">200</span>,<span class="at">y=</span>list_rw[[i]], <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">lty =</span> <span class="dv">1</span>, <span class="at">col =</span> i <span class="sc">+</span><span class="dv">1</span> )</span>
+<span id="cb21-27"><a href="#cb21-27"></a>}</span>
+<span id="cb21-28"><a href="#cb21-28"></a></span>
+<span id="cb21-29"><a href="#cb21-29"></a><span class="co"># Legends</span></span>
+<span id="cb21-30"><a href="#cb21-30"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">legend =</span> <span class="fu">paste0</span>(<span class="st">"alpha = "</span>, alphas), <span class="at">lty =</span> <span class="dv">1</span>, <span class="at">col =</span> <span class="dv">1</span> <span class="sc">+</span> <span class="fu">seq_along</span>(alphas))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+</div>
+</div>
+</div>
+<div id="tabset-7-2">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python cell-code number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb22-3"><a href="#cb22-3"></a></span>
+<span id="cb22-4"><a href="#cb22-4"></a>α<span class="op">=</span>[<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.98</span>]</span>
+<span id="cb22-5"><a href="#cb22-5"></a>T <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb22-6"><a href="#cb22-6"></a>x <span class="op">=</span> [<span class="dv">0</span>]<span class="op">*</span>(T<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb22-7"><a href="#cb22-7"></a>ϵ<span class="op">=</span>np.random.randn(T)</span>
+<span id="cb22-8"><a href="#cb22-8"></a><span class="cf">for</span> j <span class="kw">in</span> α:</span>
+<span id="cb22-9"><a href="#cb22-9"></a>    x[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb22-10"><a href="#cb22-10"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(T):</span>
+<span id="cb22-11"><a href="#cb22-11"></a>         x[i<span class="op">+</span><span class="dv">1</span>]<span class="op">=</span>j <span class="op">*</span>x[i]<span class="op">+</span>ϵ[i]</span>
+<span id="cb22-12"><a href="#cb22-12"></a>    plt.plot(x, label<span class="op">=</span><span class="ss">f'$</span><span class="ch">\\</span><span class="ss">alpha = </span><span class="sc">{</span>j<span class="sc">}</span><span class="ss">$'</span>)</span>
+<span id="cb22-13"><a href="#cb22-13"></a></span>
+<span id="cb22-14"><a href="#cb22-14"></a>plt.legend()</span>
+<span id="cb22-15"><a href="#cb22-15"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="integrated-stochastic-process" class="slide level3">
+<h3>Integrated Stochastic Process</h3>
+<ul>
+<li class="fragment"><p>RWP is non-stationary but its first difference is stationary <span class="math display">\[\begin{equation}
+\begin{aligned}
+&amp;y_{t}=y_{t-1}+u_{t} \\
+&amp;\Delta y_{t}=u_{t}
+\end{aligned}
+\end{equation}\]</span></p></li>
+<li class="fragment"><p><span class="math inline">\(y_t\)</span> is said to be integrated of order 1 (<span class="math inline">\(y_{t} \sim I(1)\)</span>)</p></li>
+<li class="fragment"><p>simillarly, <span class="math inline">\(y_t \sim I(2)\)</span> if <span class="math inline">\(\Delta^{2} y_{t}=u_{t}\)</span></p></li>
+</ul>
+<aside class="notes">
+<p>introduce lag operator</p>
+<p><span class="math inline">\(Ly_t= y_{t-1}\)</span></p>
+<p><span class="math display">\[
+y_{t}^{\prime}=y_{t}-y_{t-1}=y_{t}-L y_{t}=(1-L) y_{t}
+\]</span></p>
+</aside>
+</section>
+<section id="consequences-of-non-stationarity" class="slide level3">
+<h3>Consequences of Non-Stationarity</h3>
+<ul>
+<li class="fragment">Shocks do not “die” out</li>
+<li class="fragment">Statistical consequences
+<ul>
+<li class="fragment">Non normal distribution of test statistics</li>
+<li class="fragment">Bias in AR coefficients</li>
+<li class="fragment">Poor forecasts</li>
+<li class="fragment"><span style="color:red"><strong>Spurious Regression</strong> </span></li>
+</ul></li>
+</ul>
+</section>
+<section id="testing-for-non-stationarity" class="slide level3">
+<h3>Testing for Non-Stationarity</h3>
+<ul>
+<li class="fragment">Unit root problem</li>
+<li class="fragment">Conventional Unit root tests
+<ul>
+<li class="fragment">DF test</li>
+<li class="fragment">ADF test</li>
+<li class="fragment">PP test</li>
+<li class="fragment">DF GLS test</li>
+</ul></li>
+<li class="fragment">Unit root with structural breaks</li>
+<li class="fragment">KPSS stationarity test</li>
+</ul>
+<div class="footer footer-default">
 
 </div>
 </section></section>
