@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Timeseries Analysis"
+title: "Introduction to <br>Time series Analysis"
 format: 
   revealjs:
     theme: sky
@@ -16,6 +16,7 @@ format:
       buttons: false
     code-fold: true
     code-copy: true
+    font: serif
 author:
   - Nithin M 
   - Senior Research Fellow 
@@ -26,7 +27,7 @@ engine: knitr
 ### Introduction
 - What is time series?
 - Examples of time series data
-- why study time series?
+- Why study time series?
 
 
 ::: {.notes}
@@ -39,7 +40,7 @@ engine: knitr
 
 ### Components of time series {.scrollable}
 
-a time series can be decomposed into 4 components
+A time series can be decomposed into 4 components
 
 1. Trend
    - long pattern of the series
