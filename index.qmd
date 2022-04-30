@@ -442,6 +442,14 @@ $$
 - Unit root with structural breaks
 - KPSS stationarity test
 
+::: {.notes}
+DF test, errors are white noise while in ADF we allow for autocorrelation
+in PP errors are ARMA
+- PP based on aymptotic properties
+
+
+:::
+
 ## Where do we go from here??
 
 ### Advanced Topics
